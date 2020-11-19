@@ -1,7 +1,7 @@
 /**
  * 
  */
-package io.sms.demo;
+package io.sms.demo.demo;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,11 +23,11 @@ public class hello_cont {
 		return "Hey pandas";
 	}
 	
-	//hello-world-bean
-	@GetMapping(path="/bean")
-	public hellobean hellobean()
+	//hello-world-bean {variable access}
+	@GetMapping(path="/bean/{name}")
+	public hellobean hellobean(@PathVariable String name )
 	{
-		return new hellobean("pandas");
+		return new hellobean(String.format("%s pandas", name));
 	}
 
 }

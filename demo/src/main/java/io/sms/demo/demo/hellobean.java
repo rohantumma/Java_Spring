@@ -1,7 +1,7 @@
 /**
  * 
  */
-package io.sms.demo;
+package io.sms.demo.demo;
 
 /**
  * @author rohan
